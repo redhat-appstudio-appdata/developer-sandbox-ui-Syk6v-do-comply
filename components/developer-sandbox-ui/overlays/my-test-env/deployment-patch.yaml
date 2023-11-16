@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: developer-sandbox-ui
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/mdsaud-tenant/developer-sandbox-ui/developer-sandbox-ui@sha256:af3bb899c0e97793921e5c3bfb39483c8adee2eb23d08e750ec370840ac89f18
+        name: my-nodejs
+        resources: {}
+status: {}
