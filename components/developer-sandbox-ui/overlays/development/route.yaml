@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: developer-sandbox-ui
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: developer-sandbox-ui
+    app.kubernetes.io/part-of: developer-sandbox-ui
+  name: developer-sandbox-uiqktt
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: developer-sandbox-ui
+    weight: null
+status: {}
